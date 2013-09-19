@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MassConverter", "MassConverter\MassConverter.csproj", "{4F6D776D-0F41-4D56-A485-24234A33D830}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4F6D776D-0F41-4D56-A485-24234A33D830}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F6D776D-0F41-4D56-A485-24234A33D830}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F6D776D-0F41-4D56-A485-24234A33D830}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F6D776D-0F41-4D56-A485-24234A33D830}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

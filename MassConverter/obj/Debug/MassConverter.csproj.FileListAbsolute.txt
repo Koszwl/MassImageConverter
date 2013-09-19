@@ -1,0 +1,16 @@
+B:\DEV\MassConverter\MassConverter\bin\Debug\MassConverter.exe.config
+B:\DEV\MassConverter\MassConverter\bin\Debug\MassConverter.exe
+B:\DEV\MassConverter\MassConverter\bin\Debug\MassConverter.pdb
+B:\DEV\MassConverter\MassConverter\obj\Debug\MainWindow.baml
+B:\DEV\MassConverter\MassConverter\obj\Debug\MainWindow.g.cs
+B:\DEV\MassConverter\MassConverter\obj\Debug\App.g.cs
+B:\DEV\MassConverter\MassConverter\obj\Debug\MassConverter_MarkupCompile.cache
+B:\DEV\MassConverter\MassConverter\obj\Debug\MassConverter.g.resources
+B:\DEV\MassConverter\MassConverter\obj\Debug\MassConverter.Properties.Resources.resources
+B:\DEV\MassConverter\MassConverter\obj\Debug\MassConverter.csproj.GenerateResource.Cache
+B:\DEV\MassConverter\MassConverter\obj\Debug\MassConverter.exe
+B:\DEV\MassConverter\MassConverter\obj\Debug\MassConverter.pdb
+B:\DEV\MassConverter\MassConverter\bin\Debug\FreeImageNET.dll
+B:\DEV\MassConverter\MassConverter\bin\Debug\Ookii.Dialogs.Wpf.dll
+B:\DEV\MassConverter\MassConverter\bin\Debug\Ookii.Dialogs.Wpf.xml
+B:\DEV\MassConverter\MassConverter\obj\Debug\MassConverter.csprojResolveAssemblyReference.cache

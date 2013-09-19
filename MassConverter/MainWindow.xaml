@@ -1,0 +1,94 @@
+﻿<Window x:Class="MassConverter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Mass Image Converter"
+        Icon="logo.ico"
+        SizeToContent="WidthAndHeight" ResizeMode="NoResize">
+    <Window.Background>
+        <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+    </Window.Background>
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock Text="Source directory" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+            <TextBlock Text="Output directory" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+            <TextBox x:Name="TxtSourceDir" Grid.Column="1" Grid.Row="0" Margin="2 2 0 2" IsReadOnly="True" MinWidth="300"/>
+            <TextBox x:Name="TxtOutputDir" Grid.Column="1" Grid.Row="1" Margin="2 2 0 2" IsReadOnly="True" MinWidth="300"/>
+            <Button x:Name="BtnOpenSourceDir" Grid.Column="2" Grid.Row="0" Margin="-1 2 0 2" ToolTip="Selected source images directory" Click="BtnOpenSourceDirOnClick">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="Resources/open.png" Width="16"/>
+                </StackPanel>
+            </Button>
+            <Button x:Name="BtnOpenOutputDir" Grid.Column="2" Grid.Row="1" Margin="-1 2 0 2" ToolTip="Selected output images directory" Click="BtnOpenOutputDirOnClick">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="Resources/open.png" Width="16"/>
+                </StackPanel>
+            </Button>
+            <Grid Grid.Row="2" Grid.ColumnSpan="3" Grid.Column="0" Margin="0 10 0 0">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <GroupBox x:Name="GbConvertOptions" Header="Convert options">
+                    <StackPanel Margin="5">
+                        <GroupBox Header="Source formats">
+                            <DockPanel Margin="5">
+                                <CheckBox Content="dds" Margin="0 0 20 0" Tag="dds" Checked="SourceFormatOnChecked" Unchecked="SourceFormatOnUnchecked"/>
+                                <CheckBox Content="png" Margin="0 0 20 0" Tag="png" Checked="SourceFormatOnChecked" Unchecked="SourceFormatOnUnchecked"/>
+                                <CheckBox Content="jpg" Margin="0 0 20 0" Tag="jpg" Checked="SourceFormatOnChecked" Unchecked="SourceFormatOnUnchecked"/>
+                                <CheckBox Content="gif" Margin="0 0 20 0" Tag="gif" Checked="SourceFormatOnChecked" Unchecked="SourceFormatOnUnchecked"/>
+                                <CheckBox Content="bmp" Margin="0 0 20 0" Tag="bmp" Checked="SourceFormatOnChecked" Unchecked="SourceFormatOnUnchecked"/>
+                            </DockPanel>
+                        </GroupBox>
+                        <GroupBox Header="Destination format">
+                            <DockPanel Margin="5">
+                                <RadioButton Content="dds" GroupName="output" Margin="0 0 20 0" Tag="dds" Checked="OutputFormatOnChecked"/>
+                                <RadioButton Content="png" GroupName="output" Margin="0 0 20 0" Tag="png" Checked="OutputFormatOnChecked"/>
+                                <RadioButton Content="jpg" GroupName="output" Margin="0 0 20 0" Tag="jpg" Checked="OutputFormatOnChecked"/>
+                                <RadioButton Content="gif" GroupName="output" Margin="0 0 20 0" Tag="gif" Checked="OutputFormatOnChecked"/>
+                                <RadioButton Content="bmp" GroupName="output" Margin="0 0 20 0" Tag="bmp" Checked="OutputFormatOnChecked"/>
+                            </DockPanel>
+                        </GroupBox>
+                    </StackPanel>
+                </GroupBox>
+                <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0 10 0 0" HorizontalAlignment="Center">
+                    <Button x:Name="BtnConvert" Click="BtnConvertOnClick">
+                        <StackPanel Orientation="Horizontal" Margin="5 0">
+                            <Image Source="Resources/convert.png" Margin="2" Width="16"/>
+                            <TextBlock Text="Convert" Margin="2" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+                    <Button x:Name="BtnStop" Margin="10 0" IsEnabled="False" Click="BtnStopOnClick">
+                        <StackPanel Orientation="Horizontal" Margin="5 0">
+                            <Image Source="Resources/stop.png" Margin="2" Width="16"/>
+                            <TextBlock Text="Stop" Margin="2" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock x:Name="TxtProgressText" Visibility="Collapsed" Margin="0 10 0 2"/>
+            <ProgressBar x:Name="PbProgress" Height="24px" Visibility="Collapsed" Grid.Row="1"/>
+        </Grid>
+        <TextBlock Text="pdev © 2013" Foreground="BlueViolet" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+    </Grid>
+</Window>
