@@ -13,4 +13,3 @@ B:\DEV\MassConverter\MassConverter\obj\Debug\MassConverter.pdb
 B:\DEV\MassConverter\MassConverter\bin\Debug\FreeImageNET.dll
 B:\DEV\MassConverter\MassConverter\bin\Debug\Ookii.Dialogs.Wpf.dll
 B:\DEV\MassConverter\MassConverter\bin\Debug\Ookii.Dialogs.Wpf.xml
-B:\DEV\MassConverter\MassConverter\obj\Debug\MassConverter.csprojResolveAssemblyReference.cache

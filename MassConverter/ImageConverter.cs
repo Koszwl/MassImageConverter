@@ -59,7 +59,23 @@ namespace MassConverter {
                     try {
                         var output = FreeImage.LoadFromStream(fs);
                         if (output.IsNull) continue;
-                        FreeImage.Save(targetFormat, output, outputFileName, FREE_IMAGE_SAVE_FLAGS.DEFAULT);
+                        switch (targetFormat) {
+                            case FREE_IMAGE_FORMAT.FIF_PNG:
+                                FreeImage.SaveEx(output, outputFileName, targetFormat, FREE_IMAGE_SAVE_FLAGS.PNG_Z_NO_COMPRESSION);
+                                break;
+                            case FREE_IMAGE_FORMAT.FIF_GIF:
+                                FreeImage.SaveEx(output, outputFileName, targetFormat);
+                                break;
+                            case FREE_IMAGE_FORMAT.FIF_JPEG:
+                                FreeImage.SaveEx(output, outputFileName, targetFormat, FREE_IMAGE_SAVE_FLAGS.JPEG_QUALITYGOOD);
+                                break;
+                            case FREE_IMAGE_FORMAT.FIF_DDS:
+                                FreeImage.SaveEx(output, outputFileName, targetFormat);
+                                break;
+                            case FREE_IMAGE_FORMAT.FIF_BMP:
+                                FreeImage.SaveEx(output, outputFileName, targetFormat);
+                                break;
+                        }
                     } catch (Exception ex) { }
                     ClearMemory();
                 }
